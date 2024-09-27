@@ -11,9 +11,19 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os  # Add this line if not already present
+
+# Base directory of your project
+
+# Static files (CSS, JavaScript, Images)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+STATICFILES_DIRS = [BASE_DIR / "static"]
+
+STATIC_URL = '/static/'
 
 
 # Quick-start development settings - unsuitable for production
@@ -37,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'portfolio'
 ]
 
 MIDDLEWARE = [
