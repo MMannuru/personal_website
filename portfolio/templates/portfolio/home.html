@@ -95,6 +95,79 @@
             font-size: 1.2em;  /* Adjust icon size */
             vertical-align: middle; /* Align icons with text */
         }
+        .nav a {
+            color: #ff79c6; /* Base color for links */
+            text-decoration: none; /* Remove default underline */
+            margin: 0 15px;
+            font-size: 1.2em;
+            position: relative;
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        /* Pink underline on hover */
+        .nav a:hover::after, .nav a.active::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #ff79c6; /* Pinkish color for the underline */
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease; /* Smooth underline expansion */
+        }
+
+        .nav a::after {
+            content: '';
+            display: block;
+            width: 0; /* Initially, the underline is not visible */
+            height: 2px;
+            background: #ff79c6; /* Pinkish color for the underline */
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease; /* Smooth underline expansion */
+        }
+
+        .nav a:hover::after {
+            width: 100%; /* Full underline on hover */
+        }
+
+        /* Keep green color for text on hover */
+        .nav a:hover {
+            color: #50fa7b; /* Green hover color for text */
+        }
+
+        /* Style for the GT link */
+        .gt-link {
+            color: #ffcc00; /* Georgia Tech's golden yellow color */
+            text-decoration: none; /* Remove the default underline */
+            font-weight: bold; /* Bold for emphasis */
+            position: relative; /* Required for the underline effect */
+        }
+
+        .gt-link:hover {
+            color: #ffd700; /* Slightly lighter yellow on hover */
+        }
+
+        .gt-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: #ffcc00; /* Color of the underline */
+            transition: width 0.3s ease; /* Smooth transition */
+        }
+
+        .gt-link:hover::after {
+            width: 100%; /* Expand the underline on hover */
+            left: 0;
+            background: #ffd700; /* Lighter yellow underline on hover */
+        }
+
 
 
         .about {
@@ -137,7 +210,7 @@
     <div class="container">
         <div class="header">
             <h1>Mokshith Mannuru</h1>
-            <p>Undergraduate Student @ <span>Georgia Institute of Technology</span></p> <!-- Added golden yellow for GT -->
+            <p>Undergraduate @ <a href="https://www.gatech.edu" target="_blank" class="gt-link">Georgia Institute of Technology</a></p>
         </div>
         <div class="profile-image">
             <img src="{% static 'portfolio/site.jpg' %}" alt="Profile Picture">
@@ -147,10 +220,10 @@
             <a href="#">about</a>
             <a href="#">research</a>
             <a href="#">projects</a>
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+            <a href="https://www.linkedin.com/in/mokshithmannuru/" target="_blank">
                 <i class="fab fa-linkedin"></i> linkedin
             </a>
-            <a href="https://github.com/your-username" target="_blank">
+            <a href="https://github.com/mmannuru" target="_blank">
                 <i class="fab fa-github"></i> github
             </a>
         </div>
