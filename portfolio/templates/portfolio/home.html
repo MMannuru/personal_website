@@ -91,6 +91,11 @@
             bottom: -5px;
             left: 0;
         }
+        .nav i {
+            font-size: 1.2em;  /* Adjust icon size */
+            vertical-align: middle; /* Align icons with text */
+        }
+
 
         .about {
             margin-top: 20px;
@@ -98,6 +103,16 @@
             color: #fff; /* Make main body text white */
             line-height: 1.6;
         }
+        /* Reset the color for the LinkedIn icon */
+        .nav a[href*="linkedin"] i {
+            color: #00a6ff; /* LinkedIn's official blue color */
+        }
+
+        /* Reset the color for the GitHub icon */
+        .nav a[href*="github"] i {
+            color: #fff9f9; /* GitHub's official black color */
+        }
+
 
         .about p {
             margin-bottom: 20px;
@@ -132,9 +147,12 @@
             <a href="#">about</a>
             <a href="#">research</a>
             <a href="#">projects</a>
-            <a href="#">awards</a>
-            <a href="#">linkedIn</a>
-            <a href="#">github</a>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                <i class="fab fa-linkedin"></i> linkedin
+            </a>
+            <a href="https://github.com/your-username" target="_blank">
+                <i class="fab fa-github"></i> github
+            </a>
         </div>
         <div class="about">
             <p>Hey! I'm Mokshith, and I'm studying computer science with an interest in machine learning.</p>
