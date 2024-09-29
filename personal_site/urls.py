@@ -17,8 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include  # Add `include` to the import
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('portfolio.urls')),
+    path('', include('portfolio.urls')),  # Ensure this line is there to include portfolio app URLs
 ]
+

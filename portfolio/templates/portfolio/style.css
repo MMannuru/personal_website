@@ -1,0 +1,182 @@
+/* Main styling for the website */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Keep the preferred font */
+    background-color: #000; /* Black background */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 3.8em;
+    margin: 0;
+}
+
+.header p {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: bold;
+}
+
+.header p span {
+    color: #ffcc00;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    margin: 20px 0;
+}
+
+.nav a {
+    color: #ff79c6; /* Pinkish color for links */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover, .nav a.active {
+    color: #50fa7b; /* Green hover color */
+}
+
+.nav a.active:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ff79c6;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav i {
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+/* Pink underline on hover */
+.nav a:hover::after, .nav a.active::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff79c6;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff79c6;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* Style for the GT link */
+.gt-link {
+    color: #ffcc00; /* Georgia Tech's golden yellow color */
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.gt-link:hover {
+    color: #ffd700; /* Slightly lighter yellow on hover */
+}
+
+.gt-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #ffcc00;
+    transition: width 0.3s ease;
+}
+
+.gt-link:hover::after {
+    width: 100%;
+    left: 0;
+    background: #ffd700;
+}
+
+.about {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #fff; /* Make main body text white */
+    line-height: 1.6;
+}
+
+.about p {
+    margin-bottom: 20px;
+}
+
+.cta {
+    margin-top: 20px;
+}
+
+.cta a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cta a:hover {
+    color: #00a6ff;
+}
+
+/* Reset the color for the LinkedIn icon */
+.nav a[href*="linkedin"] i {
+    color: #00a6ff; /* LinkedIn's official blue color */
+}
+
+/* Reset the color for the GitHub icon */
+.nav a[href*="github"] i {
+    color: #fff9f9; /* GitHub's official black color */
+}

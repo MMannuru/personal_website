@@ -1,0 +1,68 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+{% block content %}
+<div class="content" style="font-size: 1.2em; color: #fff;">
+    <p>
+        Some projects I've worked/been working on.
+    </p>
+
+    <!-- Project 1 -->
+    <div class="project">
+        <h3 style="color: #62dafb; font-size: 1.4em;">GameLogs - Video Game Tracker and Community Platform</h3>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="{% static 'portfolio/game.jpg' %}" alt="Description of the image" style="width: 700px; height: 400px; border-radius: 10px;">
+        </div>
+        <p>
+            Currently building. GameLogs allows users to find, track, and share video games with friends and the community. It provides a comprehensive system for managing game backlogs, creating reviews, and finding new games through personalized recommendations. Users can search for games and friends, view detailed game information, and keep up with the latest trends in gaming through an activity feed.
+        </p>
+        <ul style="color: #ffd700;">
+            <li><strong>Technologies:</strong> React, Express/Node, PostgresSQL, PyTorch</li>
+        </ul>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+        <h3 style="color: #62dafb; font-size: 1.4em;">Language Detection System with Kernelized Support Vector Machines</h3>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="{% static 'portfolio/SVM.jpg' %}" alt="Description of the image" style="width: 600px; height: 400px; border-radius: 10px;">
+        </div>
+        <p>
+            Developed a language detection system using Support Vector Machines (SVM) for rapid and accurate classification (95%) of languages. The model uses a TfidfVectorizer to extract character-level n-grams as features, enabling effective handling of diverse languages with minimal data. The pipeline integrates a LinearSVC classifier for efficient training and prediction. SVMs are powerful when operating in high-dimensional feature spaces, which makes them great for solving problems like this. The model is also incredibly fast and only takes 2-3 seconds for prediction.
+        </p>
+        <ul style="color: #ffd700;">
+            <li><strong>Technologies:</strong> Python, Scikit-Learn</li>
+        </ul>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+        <h3 style="color: #62dafb; font-size: 1.4em;">Neural Networks from Scratch to Predict House Prices in California</h3>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="{% static 'portfolio/neur.jpg' %}" alt="Description of the image" style="width: 600px; height: 280px; border-radius: 10px;">
+        </div>
+        <p>
+            Built a fully connected neural network including non-linear activation functions, forward propagation, backpropagation, and gradient descent algorithms from scratch to classify the price of houses in California.
+        </p>
+        <ul style="color: #ffd700;">
+            <li><strong>Technologies:</strong> Python, NumPy</li>
+        </ul>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project">
+        <h3 style="color: #62dafb; font-size: 1.4em;">SummarAI: A Smart Study Buddy that Summarizes Notes and Answers Questions!</h3>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="{% static 'portfolio/sum.jpg' %}" alt="Description of the image" style="width: 700px; height: 500px; border-radius: 10px;">
+        </div>
+        <p>
+            I built this to learn how to use a new technology. SummarAI is an app that allows you to summarize PDFs and ask questions about them. The motivation behind this app was to help students study. When studying for classes, I found it greatly beneficial to first get an idea of what I'm going to learn. This can be applied to all PDFs. This app uses EvaDB, an AI database system that makes it easy to use machine learning models on SQL and vector databases. Here it is used to help summarize content from a user's given PDF (EvaDB's in-built support for BART is used in this app). SQLite is the default database engine that EvaDB connects to.
+        </p>
+        <ul style="color: #ffd700;">
+            <li><strong>Technologies:</strong> Python, SQLite, EvaDB</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+

@@ -196,13 +196,13 @@
         }
 
         .cta a {
-            color: #50fa7b;
+            color: #ffd700;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .cta a:hover {
-            color: #32a852;
+            color: #00a6ff;
         }
     </style>
 </head>
@@ -213,13 +213,13 @@
             <p>Undergraduate @ <a href="https://www.gatech.edu" target="_blank" class="gt-link">Georgia Institute of Technology</a></p>
         </div>
         <div class="profile-image">
-            <img src="{% static 'portfolio/site.jpg' %}" alt="Profile Picture">
+            <img src="{% static 'portfolio/dubai.jpg' %}" alt="Profile Picture">
         </div>
         <div class="nav">
             <a href="#" class="active">home</a>
-            <a href="#">about</a>
-            <a href="#">research</a>
-            <a href="#">projects</a>
+            <a href="{% url 'about' %}" class="{% if request.path == '/about/' %}active{% endif %}">about</a>
+            <a href="{% url 'research' %}" class="{% if request.path == '/research/' %}active{% endif %}">research</a>
+            <a href="{% url 'projects' %}" class="{% if request.path == '/projects/' %}active{% endif %}">projects</a>
             <a href="https://www.linkedin.com/in/mokshithmannuru/" target="_blank">
                 <i class="fab fa-linkedin"></i> linkedin
             </a>
@@ -232,7 +232,7 @@
             <p>I'm currently working on automating 3D computer vision algorithms and using generative AI to design microstructures conditioned on complex non-linear mechanics. In my free time I like to watch sports! I really enjoy basketball and cricket. Recently, I've picked up cooking!</p>
         </div>
         <div class="cta">
-            <p>You should <a href="#">subscribe to my newsletter</a>, or play my word game, <a href="#">Jumblie!</a></p>
+            <p>You can contact me at <a href="#">[mokshithm15@gmail.com]</a>, or at <a href="#">[mmannuru3@gatech.edu]. </a>I'm always open to talk.</p>
         </div>
     </div>
 </body>
